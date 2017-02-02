@@ -9,13 +9,13 @@ import org.greenrobot.eventbus.EventBus;
 public class ProgressController {
 
 
-    public void display(String title, String message) {
-        ProgressState displayProgress = new ProgressState(true,title,message);
-        EventBus.getDefault().post(displayProgress);
+    public void displayProgress(String title, String message) {
+        ProgressState progressState = new ProgressState(true,title,message);
+        EventBus.getDefault().post(progressState);
     }
 
     public void dimiss() {
-        ProgressState cancelProgress = new ProgressState(false);
-        EventBus.getDefault().post(cancelProgress);
+        ProgressState progressState = new ProgressState(false);
+        EventBus.getDefault().post(progressState);
     }
 }

@@ -11,11 +11,11 @@ import com.android.volley.toolbox.Volley;
 
 public class MainApplication extends Application {
 
-    private RequestQueue mRequestQueue;
-
-    public void onCreate() {
-        mRequestQueue = Volley.newRequestQueue(this);
-    }
-
+//    private RequestQueue mRequestQueue;
+//
+//    public void onCreate() {
+//        mRequestQueue = Volley.newRequestQueue(this);
+//    }
+//
 
 }
