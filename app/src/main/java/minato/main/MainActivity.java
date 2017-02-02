@@ -1,10 +1,13 @@
-package minato;
+package minato.main;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.LinearLayout;
 
-import minato.networkarchitecture.R;
+
+import minato.R;
+import minato.network.architecture.retrofit.ApiProxy;
+import minato.openweather.WeatherConfig;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -16,9 +19,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         linearLayout = (LinearLayout)this.findViewById(R.id.linearlayout);
-
-        DynamicAddEditText dynamicAddEditText = new DynamicAddEditText(this,linearLayout);
-        dynamicAddEditText.setText("MTP12FJSPGJCM3");
+        ApiProxy.getCityWeather(WeatherConfig.CityID);
 
     }
 

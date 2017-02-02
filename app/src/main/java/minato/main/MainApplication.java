@@ -1,4 +1,4 @@
-package minato.networkarchitecture;
+package minato.main;
 
 import android.app.Application;
 

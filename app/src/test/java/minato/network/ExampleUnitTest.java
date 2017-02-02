@@ -1,4 +1,4 @@
-package minato.networkarchitecture;
+package minato.network;
 
 import org.junit.Test;
 

@@ -1,12 +1,10 @@
-package minato.networkarchitecture;
+package minato.network.architecture.volley;
 
 import android.content.Context;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
-import com.android.volley.VolleyError;
 import com.android.volley.toolbox.HttpStack;
-import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
 /**
@@ -17,18 +15,6 @@ public class NetworkManager {
 
     private RequestQueue requestQueue ;
 
-    private ApiResponse apiResponse = new ApiResponse() {
-        @Override
-        public void onSuccess(Object o) {
-
-        }
-
-        @Override
-        public void onNetworkError(VolleyError error) {
-
-        }
-    };
-
     public NetworkManager(Context context) {
         requestQueue = Volley.newRequestQueue(context);
     }
@@ -37,8 +23,8 @@ public class NetworkManager {
         requestQueue = Volley.newRequestQueue(context,httpStack);
     }
 
-    public void sendRequest() {
-
+    public void sendRequest(Request request) {
+        requestQueue.add(request);
     }
 
 

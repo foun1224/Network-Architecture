@@ -1,4 +1,4 @@
-package minato.networkarchitecture;
+package minato.network;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
