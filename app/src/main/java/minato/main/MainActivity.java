@@ -2,6 +2,7 @@ package minato.main;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 
 
@@ -15,10 +16,12 @@ public class MainActivity extends AppCompatActivity {
 
     ProgressControlReceiver progressReceiver ;
 
+    RecyclerView recyclerView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        recyclerView = (RecyclerView)this.findViewById(R.id.recyclerview);
         progressReceiver = new ProgressControlReceiver(this);
         ApiProxy.getCityWeather(WeatherConfig.CityID, new Action1<CityWeather>() {
             @Override
